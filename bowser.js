@@ -15,13 +15,14 @@ var t = document.getElementById("engine")
 
 }
 
-isFacebookApp()
+let x = isFacebookApp()
 console.log(isFacebookApp())
 
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
 
-if (isFacebookApp == true){
+if (x == true){
   alert("Hello! I am an alert box!!");
 }
+
