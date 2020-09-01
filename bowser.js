@@ -23,6 +23,6 @@ function openForm() {
 }
 
 if (x == true){
-  alert("Hello! I am an alert box!!");
+  alert("ITS FACEBOOK's inAPP Webview");
 }
 
