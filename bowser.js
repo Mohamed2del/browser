@@ -5,8 +5,7 @@ var t = document.getElementById("engine")
 
   function isFacebookApp() {
     var ua = navigator.userAgent || navigator.vendor || window.opera;
-    console.log(ua.indexOf("FBAN") > -1)
-    console.log(ua.indexOf("FBAV") > -1)
+    
 
     p.innerHTML= ua.indexOf("FBAN") > -1
     t.innerHTML= ua.indexOf("FBAV") > -1
@@ -17,10 +16,12 @@ var t = document.getElementById("engine")
 }
 
 isFacebookApp()
+console.log(isFacebookApp())
 
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
-if (isFacebookApp == True){
-  openForm()
+
+if (isFacebookApp == true){
+  alert("Hello! I am an alert box!!");
 }
