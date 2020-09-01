@@ -16,13 +16,9 @@ var t = document.getElementById("engine")
 }
 
 let x = isFacebookApp()
-console.log(isFacebookApp())
 
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
 
-if (x == true){
-  alert("ITS FACEBOOK's inAPP Webview");
+if (x == false){
+ document.getElementById("popup").style.display = "none"
 }
 
