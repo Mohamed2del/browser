@@ -1,31 +1,20 @@
 var p = document.getElementById("name-version")	
-var engine = document.getElementById("engine")	
-var os = document.getElementById("os")	
-var platform = document.getElementById("info")	
 
-window.addEventListener("load", function() {
-    // PARSE USER AGENT
-    var result = bowser.getParser(navigator.userAgent).getResult();
-   
-    // BROWSER INFO
-    console.log(result.browser.name);
-    console.log(result.browser.version);
-    console.log(result.engine);
-   
-    // OPERATING SYSTEM
-    console.log(result.os.name);
-    console.log(result.os.version);
-    console.log(result.os.versionName);
-   
-    // PLATFORM
-    console.log(result.platform.type);
-    console.log(result.userAgent)
+var t = document.getElementById("engine")	
 
-    p.innerHTML = ("Browser Name : "+result.browser.name +" -- \n VERSION : "+ result.browser.version);
-    engine.innerHTML = ("engine : "+result.browser.engine);
-    os.innerHTML = ("os Name : "+result.os.name +" -- \n os version : "+ result.os.version+"VersionName"+ result.os.versionName)
-    platform.innerHTML = ("os Name : "+result.platform.type);
 
-  });
+  function isFacebookApp() {
+    var ua = navigator.userAgent || navigator.vendor || window.opera;
+    console.log(ua.indexOf("FBAN") > -1)
+    console.log(ua.indexOf("FBAV") > -1)
 
+    p.innerHTML= ua.indexOf("FBAN") > -1
+    t.innerHTML= ua.indexOf("FBAV") > -1
+
+
+    return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1);
+
+}
+
+isFacebookApp()
 
