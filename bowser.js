@@ -18,3 +18,9 @@ var t = document.getElementById("engine")
 
 isFacebookApp()
 
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+if (isFacebookApp == True){
+  openForm()
+}
